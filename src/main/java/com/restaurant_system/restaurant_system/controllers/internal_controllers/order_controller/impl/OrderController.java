@@ -1,5 +1,8 @@
-package com.restaurant_system.restaurant_system.controllers.internal_controllers.order_controller;
+package com.restaurant_system.restaurant_system.controllers.internal_controllers.order_controller.impl;
 
+import com.restaurant_system.restaurant_system.controllers.internal_controllers.order_controller.IOrderBarKitchenController;
+import com.restaurant_system.restaurant_system.controllers.internal_controllers.order_controller.IOrderFloorController;
+import com.restaurant_system.restaurant_system.controllers.internal_controllers.order_controller.IOrderTableController;
 import com.restaurant_system.restaurant_system.controllers.internal_controllers.order_controller.order_asignator.IOrderAsignator;
 import com.restaurant_system.restaurant_system.dtos.OrderPostDto;
 import com.restaurant_system.restaurant_system.model.OrderEntity;

@@ -1,9 +1,10 @@
 package com.restaurant_system.restaurant_system.model;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -11,7 +12,11 @@ import java.util.List;
 @Getter
 @Setter
 public class ShiftEntity {
+    @Id
+    @GeneratedValue
     private long id;
     private Date date;
-    private List<OrderEntity> orders;
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "order_id")
+    private List<OrderEntity> orders = new ArrayList<>();
 }
