@@ -1,8 +1,7 @@
-package com.restaurant_system.restaurant_system.dtos;
+package com.restaurant_system.restaurant_system.dtos.table;
 
+import com.restaurant_system.restaurant_system.dtos.order.OrderPostDto;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 import java.util.List;
 

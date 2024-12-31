@@ -5,7 +5,7 @@ import com.restaurant_system.restaurant_system.controllers.internal_controllers.
 import com.restaurant_system.restaurant_system.controllers.internal_controllers.order_controller.IOrderTableController;
 import com.restaurant_system.restaurant_system.controllers.internal_controllers.order_controller.order_asignator.IOrderAsignator;
 import com.restaurant_system.restaurant_system.controllers.internal_controllers.table_controller.ITableOrderController;
-import com.restaurant_system.restaurant_system.dtos.OrderPostDto;
+import com.restaurant_system.restaurant_system.dtos.order.OrderPostDto;
 import com.restaurant_system.restaurant_system.model.*;
 import com.restaurant_system.restaurant_system.services.IItemService;
 import com.restaurant_system.restaurant_system.services.IOrderService;

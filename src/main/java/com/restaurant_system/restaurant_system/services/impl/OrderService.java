@@ -1,6 +1,6 @@
 package com.restaurant_system.restaurant_system.services.impl;
 
-import com.restaurant_system.restaurant_system.dtos.OrderPostDto;
+import com.restaurant_system.restaurant_system.dtos.order.OrderPostDto;
 import com.restaurant_system.restaurant_system.model.OrderEntity;
 import com.restaurant_system.restaurant_system.model.OrderStatus;
 import com.restaurant_system.restaurant_system.repos.IOrderRepos;

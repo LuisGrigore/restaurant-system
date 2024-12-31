@@ -3,7 +3,7 @@ package com.restaurant_system.restaurant_system.services.impl;
 import com.restaurant_system.restaurant_system.controllers.internal_controllers.order_controller.IOrderShiftController;
 import com.restaurant_system.restaurant_system.datasources.IShiftDatasource;
 import com.restaurant_system.restaurant_system.model.OrderEntity;
-import com.restaurant_system.restaurant_system.model.ShiftEntity;
+import com.restaurant_system.restaurant_system.dtos.shift.ShiftSendDto;
 import com.restaurant_system.restaurant_system.services.IShiftService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,7 +26,7 @@ public class ShiftService implements IShiftService {
             totalValue += order.getPrice();
         }
         float difference = realValue - totalValue;
-        ShiftEntity shift = ShiftEntity.builder()
+        ShiftSendDto shift = ShiftSendDto.builder()
                 .open(open)
                 .close(new Date())
                 .orders(orders)

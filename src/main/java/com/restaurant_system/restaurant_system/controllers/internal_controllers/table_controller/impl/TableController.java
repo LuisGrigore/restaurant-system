@@ -3,9 +3,9 @@ package com.restaurant_system.restaurant_system.controllers.internal_controllers
 import com.restaurant_system.restaurant_system.controllers.internal_controllers.table_controller.ITableFloorController;
 import com.restaurant_system.restaurant_system.controllers.internal_controllers.table_controller.ITableOrderController;
 import com.restaurant_system.restaurant_system.controllers.internal_controllers.table_controller.ITableShiftController;
-import com.restaurant_system.restaurant_system.dtos.TableLayoutDto;
-import com.restaurant_system.restaurant_system.dtos.TablePostDto;
-import com.restaurant_system.restaurant_system.dtos.TableUpdateDto;
+import com.restaurant_system.restaurant_system.dtos.table.TableLayoutDto;
+import com.restaurant_system.restaurant_system.dtos.table.TablePostDto;
+import com.restaurant_system.restaurant_system.dtos.table.TableUpdateDto;
 import com.restaurant_system.restaurant_system.model.TableEntity;
 import com.restaurant_system.restaurant_system.services.ITableService;
 import org.springframework.beans.factory.annotation.Autowired;
