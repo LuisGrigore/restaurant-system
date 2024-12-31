@@ -1,6 +1,7 @@
 package com.restaurant_system.restaurant_system.services;
 
+import java.util.Date;
+
 public interface IShiftService {
-    void createShift();
-    void closeShift(float realValue);
+    void closeShift(Date open, float realValue);
 }
