@@ -1,19 +1,16 @@
 package com.restaurant_system.restaurant_system.controllers.api_controllers;
 
-import com.restaurant_system.restaurant_system.controllers.internal_controllers.bar_kitchen_controller.impl.BarKitchenController;
-import com.restaurant_system.restaurant_system.dtos.order.OrderSendDto;
-import com.restaurant_system.restaurant_system.model.OrderEntity;
-import org.springframework.messaging.handler.annotation.SendTo;
+import com.restaurant_system.restaurant_system.model.OrderStatus;
+import com.restaurant_system.restaurant_system.services.internal_services.IOrderService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 @Controller
-public class BarController extends BarKitchenController {
-    @Override
-    //@MessageMapping("/sendOrderToBar")
-    @SendTo("/topic/bar")
-    public OrderSendDto sendOrderEvent(OrderEntity order) {
+public class BarController{
+    @Autowired
+    private IOrderService orderService;
 
-        return null;
+    public void setOrderToReady(long id){
+        orderService.updateOrderStatus(id, OrderStatus.READY);
     }
-
 }

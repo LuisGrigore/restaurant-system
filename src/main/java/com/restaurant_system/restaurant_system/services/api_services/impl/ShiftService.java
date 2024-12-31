@@ -1,10 +1,10 @@
-package com.restaurant_system.restaurant_system.services.impl;
+package com.restaurant_system.restaurant_system.services.api_services.impl;
 
-import com.restaurant_system.restaurant_system.controllers.internal_controllers.order_controller.IOrderShiftController;
 import com.restaurant_system.restaurant_system.datasources.IShiftDatasource;
 import com.restaurant_system.restaurant_system.model.OrderEntity;
 import com.restaurant_system.restaurant_system.dtos.shift.ShiftSendDto;
-import com.restaurant_system.restaurant_system.services.IShiftService;
+import com.restaurant_system.restaurant_system.services.api_services.IShiftService;
+import com.restaurant_system.restaurant_system.services.internal_services.IOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,12 +14,12 @@ import java.util.List;
 @Service
 public class ShiftService implements IShiftService {
     @Autowired
-    private IOrderShiftController orderController;
+    private IOrderService orderService;
     @Autowired
     private IShiftDatasource shiftDatasource;
     @Override
     public void closeShift(Date open, float realValue) {
-        List<OrderEntity> orders= orderController.getAllCurrentOrders();
+        List<OrderEntity> orders= orderService.getAllOrders();
         float totalValue = 0;
         for(OrderEntity order : orders)
         {

@@ -1,4 +1,4 @@
-package com.restaurant_system.restaurant_system.services;
+package com.restaurant_system.restaurant_system.services.internal_services;
 
 import com.restaurant_system.restaurant_system.dtos.table.TablePostDto;
 import com.restaurant_system.restaurant_system.dtos.table.TableUpdateDto;
