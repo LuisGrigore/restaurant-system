@@ -2,6 +2,7 @@ package com.restaurant_system.restaurant_system.controllers.internal_controllers
 
 import com.restaurant_system.restaurant_system.controllers.internal_controllers.order_controller.IOrderBarKitchenController;
 import com.restaurant_system.restaurant_system.controllers.internal_controllers.order_controller.IOrderFloorController;
+import com.restaurant_system.restaurant_system.controllers.internal_controllers.order_controller.IOrderShiftController;
 import com.restaurant_system.restaurant_system.controllers.internal_controllers.order_controller.IOrderTableController;
 import com.restaurant_system.restaurant_system.controllers.internal_controllers.order_controller.order_asignator.IOrderAsignator;
 import com.restaurant_system.restaurant_system.controllers.internal_controllers.table_controller.ITableOrderController;
@@ -15,7 +16,7 @@ import org.springframework.stereotype.Controller;
 import java.util.*;
 
 @Controller
-public class OrderController implements IOrderTableController, IOrderFloorController, IOrderBarKitchenController {
+public class OrderController implements IOrderTableController, IOrderFloorController, IOrderBarKitchenController, IOrderShiftController {
     @Autowired
     private IItemService itemService;
     @Autowired
@@ -61,5 +62,10 @@ public class OrderController implements IOrderTableController, IOrderFloorContro
     @Override
     public void setOrdersToPaid(OrderPostDto order) {
 
+    }
+
+    @Override
+    public List<OrderEntity> getAllCurrentOrders() {
+        return orderService.getAllOrders();
     }
 }
