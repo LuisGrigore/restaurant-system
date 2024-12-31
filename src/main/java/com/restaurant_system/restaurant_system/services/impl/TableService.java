@@ -5,7 +5,9 @@ import com.restaurant_system.restaurant_system.dtos.TableUpdateDto;
 import com.restaurant_system.restaurant_system.repos.ITableRepos;
 import com.restaurant_system.restaurant_system.services.ITableService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class TableService implements ITableService {
     @Autowired
     private ITableRepos tableRepos;

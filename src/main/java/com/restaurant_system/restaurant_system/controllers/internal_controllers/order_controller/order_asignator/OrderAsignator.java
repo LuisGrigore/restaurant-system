@@ -2,7 +2,9 @@ package com.restaurant_system.restaurant_system.controllers.internal_controllers
 
 import com.restaurant_system.restaurant_system.controllers.IBarKitchenController;
 import com.restaurant_system.restaurant_system.model.OrderEntity;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrderAsignator implements IOrderAsignator{
     private IBarKitchenController barController;
     private IBarKitchenController kitchenController;

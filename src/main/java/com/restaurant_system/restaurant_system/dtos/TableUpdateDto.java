@@ -11,4 +11,8 @@ public class TableUpdateDto {
     private int num;
     private int dinerNum;
     private List<OrderPostDto> orders;
+
+    public void setDinerNum(int dinerNum) {
+        this.dinerNum = dinerNum;
+    }
 }
