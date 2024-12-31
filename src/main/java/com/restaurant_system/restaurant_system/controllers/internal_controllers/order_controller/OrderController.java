@@ -1,7 +1,9 @@
 package com.restaurant_system.restaurant_system.controllers.internal_controllers.order_controller;
 
 import com.restaurant_system.restaurant_system.controllers.internal_controllers.order_controller.order_asignator.IOrderAsignator;
+import com.restaurant_system.restaurant_system.dtos.OrderPostDto;
 import com.restaurant_system.restaurant_system.model.OrderEntity;
+import com.restaurant_system.restaurant_system.model.OrderStatus;
 import com.restaurant_system.restaurant_system.services.IItemService;
 import com.restaurant_system.restaurant_system.services.IOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +18,8 @@ public class OrderController implements IOrderTableController, IOrderFloorContro
     @Autowired
     private IOrderAsignator orderAsignator;
     @Override
-    public void processOrder() {
-
+    public void setOrderStatusReady(OrderPostDto order) {
+        orderService.updateOrderStatus(order, OrderStatus.READY);
     }
 
     @Override
@@ -27,7 +29,7 @@ public class OrderController implements IOrderTableController, IOrderFloorContro
     }
 
     @Override
-    public void setOrdersToPaid() {
+    public void setOrdersToPaid(OrderPostDto order) {
 
     }
 }

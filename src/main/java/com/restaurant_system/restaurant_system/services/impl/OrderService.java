@@ -1,5 +1,6 @@
 package com.restaurant_system.restaurant_system.services.impl;
 
+import com.restaurant_system.restaurant_system.dtos.OrderPostDto;
 import com.restaurant_system.restaurant_system.model.OrderEntity;
 import com.restaurant_system.restaurant_system.model.OrderStatus;
 import com.restaurant_system.restaurant_system.repos.IOrderRepos;
@@ -15,7 +16,7 @@ public class OrderService implements IOrderService {
     }
 
     @Override
-    public void updateOrderStatus(long orderId, OrderStatus status) {
+    public void updateOrderStatus(OrderPostDto order, OrderStatus status) {
 
     }
 }
