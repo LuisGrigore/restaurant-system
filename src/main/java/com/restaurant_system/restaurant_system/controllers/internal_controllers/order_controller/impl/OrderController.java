@@ -27,7 +27,7 @@ public class OrderController implements IOrderTableController, IOrderFloorContro
     private ITableOrderController tableController;
     @Override
     public void setOrderStatusReady(OrderPostDto order) {
-        orderService.updateOrderStatus(order, OrderStatus.READY);
+        orderService.updateOrderStatus(order.getId(), OrderStatus.READY);
     }
 
     @Override
@@ -60,8 +60,10 @@ public class OrderController implements IOrderTableController, IOrderFloorContro
     }
 
     @Override
-    public void setOrdersToPaid(OrderPostDto order) {
-
+    public void setOrdersToPaid(List<OrderEntity> orders) {
+        for(OrderEntity order : orders){
+            orderService.updateOrderStatus(order.getId(), OrderStatus.PAID);
+        }
     }
 
     @Override

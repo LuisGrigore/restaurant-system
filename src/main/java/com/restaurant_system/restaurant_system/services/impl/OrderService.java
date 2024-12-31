@@ -20,8 +20,10 @@ public class OrderService implements IOrderService {
     }
 
     @Override
-    public void updateOrderStatus(OrderPostDto order, OrderStatus status) {
-
+    public void updateOrderStatus(long id, OrderStatus status) {
+        OrderEntity order = orderRepos.findById(id).get();
+        order.setStatus(status);
+        orderRepos.save(order);
     }
 
     @Override

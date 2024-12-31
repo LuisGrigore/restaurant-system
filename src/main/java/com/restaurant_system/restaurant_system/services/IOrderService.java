@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface IOrderService {
     void addOrder(OrderEntity order);
-    void updateOrderStatus(OrderPostDto order, OrderStatus status);
+    void updateOrderStatus(long id, OrderStatus status);
 
     List<OrderEntity> getAllOrders();
 }

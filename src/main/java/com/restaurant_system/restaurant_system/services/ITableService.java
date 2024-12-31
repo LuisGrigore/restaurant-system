@@ -6,6 +6,7 @@ import com.restaurant_system.restaurant_system.model.TableEntity;
 
 public interface ITableService {
     void createTable(TablePostDto table);
-    void updateTable(TableUpdateDto table);
     TableEntity getTableByNum(int num);
+
+    void resetTable(int num);
 }
