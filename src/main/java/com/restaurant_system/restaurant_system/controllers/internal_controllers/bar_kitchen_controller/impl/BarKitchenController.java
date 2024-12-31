@@ -1,6 +1,5 @@
-package com.restaurant_system.restaurant_system.controllers.internal_controllers.impl;
+package com.restaurant_system.restaurant_system.controllers.internal_controllers.bar_kitchen_controller.impl;
 
-import com.restaurant_system.restaurant_system.controllers.IBarKitchenController;
 import com.restaurant_system.restaurant_system.controllers.internal_controllers.order_controller.IOrderBarKitchenController;
 import com.restaurant_system.restaurant_system.dtos.OrderPostDto;
 import org.springframework.beans.factory.annotation.Autowired;

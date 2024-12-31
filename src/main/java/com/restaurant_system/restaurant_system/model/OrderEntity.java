@@ -1,6 +1,7 @@
 package com.restaurant_system.restaurant_system.model;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,6 +12,7 @@ import java.util.List;
 
 @Entity
 @Data
+@Builder
 public class OrderEntity {
     @Id
     @GeneratedValue

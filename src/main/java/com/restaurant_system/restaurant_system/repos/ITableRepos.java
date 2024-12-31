@@ -5,4 +5,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ITableRepos extends JpaRepository<TableEntity, Long> {
+    TableEntity getByNum(int num);
 }

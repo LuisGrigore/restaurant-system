@@ -1,7 +1,7 @@
 package com.restaurant_system.restaurant_system.controllers.internal_controllers.order_controller;
 
-import com.restaurant_system.restaurant_system.dtos.OrderPostDto;
+import java.util.List;
 
 public interface IOrderFloorController {
-    void generateOrderFromItems();
+    void generateOrders(List<String> itemNames, int tableNum);
 }
