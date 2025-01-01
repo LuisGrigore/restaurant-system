@@ -36,4 +36,7 @@ public class FloorService implements IFloorService {
         }
         tableService.resetTable(num);
     }
+    public void getTables(){
+        tableService.getAllTables();
+    }
 }

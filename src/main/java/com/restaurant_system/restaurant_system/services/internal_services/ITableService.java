@@ -9,4 +9,6 @@ public interface ITableService {
     TableEntity getTableByNum(int num);
 
     void resetTable(int num);
+
+    void getAllTables();
 }

@@ -9,9 +9,7 @@ import com.restaurant_system.restaurant_system.model.TableEntity;
 import java.util.List;
 
 public interface IOrderService {
-    void addOrder(OrderEntity order);
     void updateOrderStatus(long id, OrderStatus status);
-
     List<OrderEntity> getAllOrders();
     void generateOrders(List<ItemEntity> itemNames, TableEntity table);
 }

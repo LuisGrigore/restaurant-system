@@ -29,4 +29,9 @@ public class TableService implements ITableService {
         table.setOrders(new ArrayList<>());
         tableRepos.save(table);
     }
+
+    @Override
+    public void getAllTables() {
+        tableRepos.findAll();
+    }
 }

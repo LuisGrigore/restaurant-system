@@ -16,10 +16,6 @@ public class OrderService implements IOrderService {
     @Autowired
     private IOrderAsignator orderAsignator;
     @Override
-    public void addOrder(OrderEntity order) {
-
-    }
-    @Override
     public void generateOrders(List<ItemEntity> items, TableEntity table) {
         Map<Type,List<ItemEntity>> sortedItems= new HashMap<>();
         for(ItemEntity item : items){
