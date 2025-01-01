@@ -4,8 +4,6 @@ import com.restaurant_system.restaurant_system.model.OrderEntity;
 import com.restaurant_system.restaurant_system.model.Type;
 import lombok.Data;
 
-@Data
-public abstract class OrderReciever {
-    private Type type;
-    public abstract void sendOrder(OrderEntity order);
+public interface OrderReciever {
+    void sendOrder(OrderEntity order);
 }

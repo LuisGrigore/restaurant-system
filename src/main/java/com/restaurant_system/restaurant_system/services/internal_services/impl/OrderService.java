@@ -1,6 +1,6 @@
 package com.restaurant_system.restaurant_system.services.internal_services.impl;
 
-import com.restaurant_system.restaurant_system.controllers.internal_controllers.order_controller.order_asignator.IOrderAsignator;
+import com.restaurant_system.restaurant_system.order_asignator.IOrderAsignator;
 import com.restaurant_system.restaurant_system.model.*;
 import com.restaurant_system.restaurant_system.repos.IOrderRepos;
 import com.restaurant_system.restaurant_system.services.internal_services.IOrderService;
@@ -23,8 +23,11 @@ public class OrderService implements IOrderService {
                 sortedItems.computeIfAbsent(item.getType(), k -> new ArrayList<>()).add(item);
             }
         }
+        OrderEntity order;
         for(Type type : sortedItems.keySet()){
-            orderAsignator.asignOrder(orderFactory(sortedItems.get(type), type, table));
+            order = orderFactory(sortedItems.get(type), type, table);
+            orderRepos.save(order);
+            orderAsignator.asignOrder(order);
         }
     }
     private OrderEntity orderFactory(List<ItemEntity> items, Type type, TableEntity table){

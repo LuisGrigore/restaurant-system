@@ -2,6 +2,5 @@ package com.restaurant_system.restaurant_system.services.api_services;
 
 import com.restaurant_system.restaurant_system.model.OrderEntity;
 
-public interface IKitchenService {
-    //void sendOrder(OrderEntity order);
+public interface IKitchenService extends OrderReciever{
 }

@@ -6,12 +6,14 @@ import com.restaurant_system.restaurant_system.services.internal_services.IItemS
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class ItemService implements IItemService {
     @Autowired
     private IItemDatasource itemDatasource;
     @Override
-    public ItemEntity getItemByName(String name) {
+    public Optional<ItemEntity> getItemByName(String name) {
         return itemDatasource.getItemByName(name);
     }
 }

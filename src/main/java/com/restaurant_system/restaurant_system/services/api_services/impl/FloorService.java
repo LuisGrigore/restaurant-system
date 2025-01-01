@@ -24,7 +24,7 @@ public class FloorService implements IFloorService {
         List<ItemEntity> items = new ArrayList<>();
         TableEntity table = tableService.getTableByNum(addItemsToTableDto.getTable());
         for(String name : addItemsToTableDto.getItemNames()){
-            items.add(itemService.getItemByName(name));
+            items.add(itemService.getItemByName(name).get());
         }
         orderService.generateOrders(items, table);
     }
