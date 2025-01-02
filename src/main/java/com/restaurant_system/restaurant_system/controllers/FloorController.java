@@ -1,4 +1,4 @@
-package com.restaurant_system.restaurant_system.controllers.api_controllers;
+package com.restaurant_system.restaurant_system.controllers;
 
 import com.restaurant_system.restaurant_system.dtos.table.AddItemsToTableDto;
 import com.restaurant_system.restaurant_system.services.api_services.IFloorService;

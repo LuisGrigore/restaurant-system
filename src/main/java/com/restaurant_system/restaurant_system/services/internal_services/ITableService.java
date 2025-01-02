@@ -11,4 +11,5 @@ public interface ITableService {
     void resetTable(int num);
 
     void getAllTables();
+    void senTableUpdate();
 }

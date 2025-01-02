@@ -6,12 +6,5 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 
 public class BarService implements IBarService{
-    @Autowired
-    private SimpMessagingTemplate template;
 
-    @Override
-    public void sendOrder(OrderEntity order) {
-        //convert entity to mesage
-        template.convertAndSend("/topic/bar-orders", order);
-    }
 }

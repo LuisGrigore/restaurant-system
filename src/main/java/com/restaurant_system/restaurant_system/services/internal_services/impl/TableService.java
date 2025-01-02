@@ -1,6 +1,7 @@
 package com.restaurant_system.restaurant_system.services.internal_services.impl;
 
 import com.restaurant_system.restaurant_system.dtos.table.TablePostDto;
+import com.restaurant_system.restaurant_system.message_sender.MessageSender;
 import com.restaurant_system.restaurant_system.model.TableEntity;
 import com.restaurant_system.restaurant_system.repos.ITableRepos;
 import com.restaurant_system.restaurant_system.services.internal_services.ITableService;
@@ -13,6 +14,8 @@ import java.util.ArrayList;
 public class TableService implements ITableService {
     @Autowired
     private ITableRepos tableRepos;
+    @Autowired
+    private MessageSender messageSender;
     @Override
     public void createTable(TablePostDto table) {
 
@@ -33,5 +36,10 @@ public class TableService implements ITableService {
     @Override
     public void getAllTables() {
         tableRepos.findAll();
+    }
+
+    @Override
+    public void senTableUpdate() {
+        messageSender.sendTableUpdate(tableRepos.findAll());
     }
 }

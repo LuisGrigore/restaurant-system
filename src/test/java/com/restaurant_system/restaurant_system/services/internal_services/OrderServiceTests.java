@@ -37,7 +37,7 @@ public class OrderServiceTests {
     }
 
     @Test
-    public void testGenerateOrders_NoNullItems_TableExists() {
+    public void testGenerateOrders_NoNullItems() {
         final String nameA = "nameA";
         final String nameB = "nameB";
         final String nameC = "nameC";
